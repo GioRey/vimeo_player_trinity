@@ -102,7 +102,7 @@ class _VimeoPlayerState extends State<VimeoPlayer> {
 
       BetterPlayerDataSource betterPlayerDataSource = BetterPlayerDataSource(
         BetterPlayerDataSourceType.network,
-        'https://vimeo.com/797034805',
+        'https://player.vimeo.com/video/797034805?h=799f345609',
       );
 
       setState(() {
