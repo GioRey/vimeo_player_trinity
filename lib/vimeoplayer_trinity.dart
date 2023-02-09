@@ -88,17 +88,21 @@ class _VimeoPlayerState extends State<VimeoPlayer> {
     _quality.getQualitiesSync().then((value) {
       final _qualityValue = value[value.lastKey()];
 
-      // Create resolutions map
+      // // Create resolutions map
       Map<String, String> resolutionsMap = {};
       value.keys.forEach((key) {
         String processedKey = key.split(" ")[0];
         resolutionsMap[processedKey] = value[key];
       });
 
+      // BetterPlayerDataSource betterPlayerDataSource = BetterPlayerDataSource(
+      //   BetterPlayerDataSourceType.network,
+
+      // );
+
       BetterPlayerDataSource betterPlayerDataSource = BetterPlayerDataSource(
         BetterPlayerDataSourceType.network,
-        _qualityValue,
-        resolutions: resolutionsMap,
+        'https://vimeo.com/797034805',
       );
 
       setState(() {
